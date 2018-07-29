@@ -1,0 +1,84 @@
+1. Download NOOBS from Raspberry website
+2. Get a new Micro SD card (simply phone memory card) of more than or equal to 16 GB
+3. Format the SD card using FAT 32
+4. Extracting Noobs.zip and copying on the files on the formated SD card
+5. Insert the SD to the Raspberry Pi 2 Model B 
+6. Connect Monitor (using HDMI cable to the pi) , Mouse and Keyboard and Wifi Adapter  using USB ports 
+7. Power the Pi using Adpater of 5V and 2A minimun output or dircetly using laptop
+#Check , there should be no Voltage Low Error
+8. Power On and monitor shows the Rainbow screen and power going to all the connected USB devices
+9. Let it load
+10. Noobs window will open and check Raspbian and check Install
+11. Take time to install Raspbian OS on SD card
+12. Follow the steps Set Time (If choosing India default language is Hindi so choose US for getting english as default language)
+13. Then connect to wifi and password
+14. Check of updates of Raspian and make the updates. 
+15. It takes time, wait.
+16. Open Terminal
+17. Now installing opencv 3 and python 2.7 on Raspian Stretch OS
+18. $ sudo apt-get purge wolfram-engine
+19. $ sudo apt-get purge libreoffice*
+20. $ sudo apt-get clean
+21. $ sudo apt-get autoremove
+22. $ sudo apt-get update && sudo apt-get upgrade
+23. $ sudo rpi-update
+24. $ sudo apt-get install build-essential cmake pkg-config
+25. $ sudo apt-get install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
+26. $ sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+27. $ sudo apt-get install libxvidcore-dev libx264-dev
+28. $ sudo apt-get install libgtk2.0-dev libgtk-3-dev
+29. $ sudo apt-get install libatlas-base-dev gfortran
+30. If the above does'nt run together the run individually
+31. These are all the dependencies and libraries required
+32. $ sudo apt-get install python2.7-dev
+33. $cd ~
+34. $ git clone https://github.com/Itseez/opencv_contrib.git
+35. $ cd opencv_contrib
+36. $ git checkout 3.0.0
+37. Be patient it takes time to clone the git file
+38. $ sudo apt-get install python2.7-dev
+39. $ wget https://bootstrap.pypa.io/get-pip.py
+40. $ sudo python get-pip.py
+41. $ sudo pip install virtualenv virtualenvwrapper
+42. $ sudo rm -rf ~/.cache/pip
+43. vim.tiny ~/.profile 
+44. Opens the profile file and go to the end and add the next lines
+45. # virtualenv and virtualenvwrapper
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+46. Esc and :wq! and enter
+47. source ~/.profile
+48. $mkvirtualenv cv3
+49. workon cv3
+50. $ pip install numpy
+51. $ sudo rm -rf ~/.cache/pip/
+52. $ python
+53. >> import numpy
+54. If done good and close the file by exit()
+55. $ cd ~/opencv
+56. $ mkdir build
+57. cd build 
+58. $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=~/opencv_contrib-3.0.0/modules -D BUILD_EXAMPLES=ON
+59. cd ~
+60. cd /etc
+61. vim.tiny dphys-swapfile
+62. Edit CONF_SWAPSIZE=1024
+63. Esc :w !sudo tee %
+64. cd ~
+65. $ sudo /etc/init.d/dphys-swapfile stop
+66. $ sudo /etc/init.d/dphys-swapfile start
+67. $ make -j4
+68. Now time to wait because it takes around a full night to run and if make command not found the cd opencv then run the command of $ make and if still not work then $ sudo make -j4 and if you get errors on math.h and stdlib files then change the #include_next to #include 
+69. If done then very very congratulations biggest task done!
+70. $ sudo make install
+71. $ sudo ldconfig
+72. $ ls -l /usr/local/lib/python2.7/site-packages/
+73. You should find the file cv2.so and now link cv2 to python
+74. $ ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
+75. Make sure you are working on cv3 env
+76. $ workon cv3
+77. $ python
+78. >> import cv2
+79. Should be done now for Python IDLE
+80. $ python -c "from idlelib.PyShell import main; main()"

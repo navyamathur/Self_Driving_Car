@@ -1,0 +1,9 @@
+1. Connecting the Pi Camera and start streaming images. Used a 5MP Raspberry Pi Camera Module Rev 1.3
+2. Use can also use normal USB Webcam with the Raspberry for streaming but the frame transfer is heavy for the socket, hence better use PiCam.
+3. Insert the Strip to the CSI Camera Port carefully, port is right next to the HDMI video output port.
+4. On the Pi terminal $ sudo raspi-config and in Interfacing options Enable Camera and Reboot the system.
+5. You cannot stream the video using PuTTY, it is not allowed.
+6. Now open the file stream_server.py on the computer and edit the port number and IP address.
+7. Open the stream_client.py on the Pi and edit the IP address and port.
+8. Run the stream_server.py then stream_client.py.
+9. Output will will streaming of the camera to the computer. 

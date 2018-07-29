@@ -1,0 +1,15 @@
+1. Lets start the socket programing with RPi as our client and computer as server
+2. Download and Install PuTTY on your computer from www.putty.org
+3. Use a USB to TTY cable and connect the wires from RPi to the cable and the USB to the USB socket of the computer
+4. Connections are 5V power of TTY to 5V (Pin 2) of Pi , Ground of TTY to Ground (Pin 6) of Pi, RX reciever of TTY to the TX (Pin 8) of Pi and TX transmitter of TTY to RX (Pin 8) of Pi.
+5. Initally you will see red and blue lights blinking, the red light is for power of Pi and if the connections are correct then blue light will stop otherwise connections are incorrect.
+6. Now open the device manger on your system and in USB ports options check the COM port of the connected USB to TTY cable like COM2, COM3, etc.
+7. If there shows a little yellow warning then it means that the driver of the computer is not able to support the USB plugin.
+8. To solve the error either update the drivers of your pc and if the problem still persists then install PL2303 Code 10 Fix and follow there instructions. Hope it will fix the errors.
+9. This warning may again return if you rashly use the USB plug then again you can run the same steps and get it fixed. 
+10. Run PuTTY on your system and goto connection type serial.
+11. In Serial Line add your COM value that you saw in the step 6 and add speed to 115200 and click open.
+12. A black screen will open and now press Enter
+13. Hopefully now you will be able to get the raspberry@pi ~ $ terminal. 
+14. Raspian is very much like Linux OS, now it as linux terminal same commands will follow only that you have a RAM of 1GB
+15. Try some basic python programs.

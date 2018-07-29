@@ -1,0 +1,7 @@
+1. Controlling a car using Pi: connect the motor driver, motor, wheels  and integrate all according to the circuit " https://medium.com/@Keithweaver_/controlling-dc-motors-using-python-with-a-raspberry-pi-40-pin-f6fa891dc3d "
+2. Test the car using the same webpage code
+3. Collect Training Data: either manually running the car and collecting data of the tracks and making the npz files of the training data by running the file train.py
+4. The data of the training data is saved in a folder named training_img and the npz files in training_data folder rename the folder according to you machine
+5. Open the mlp_training.py file and give the path of your folders for training data npz files and run the code.
+6. A final mlp.xml file will be generated that has all the parameters for detection of lanes
+

@@ -1,0 +1,7 @@
+1. Connect the ultra sonic sensor HC-SR04 to the jumper wires and the 5V to the 5V of Pi, GND to the Ground of Pi, TRG (Trigger) to GPIO21 (Pin 40) and ECHO to GPIO20 (Pin 38).
+2. Now run the test file ultrasonic_test.py on the Pi, it has simple GPIO programming to check if the connections are correct or not.
+3. Now open the file ultrasonic_server.py on the computer and edit the IP address and port.
+4. Now open the file ultrasonic_client.py on the Pi and edit the IP address and port same as on the ultrasonic_server.py.
+5. The client file has the GPIO program and socket program combined so the data of the ultrasonic distance is send to the server via the socket.
+6. Now run the ultrasonic_server.py file on the computer then the ultrasonic_client.py on the Pi.
+7. The distance data will flow from client to server.

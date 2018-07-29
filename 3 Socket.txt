@@ -1,0 +1,10 @@
+1. Use Pi as a CPU. 
+2. Connect a USB Mouse and Keyboard to the USB sockets of your Pi and if you are using Pi 2 then also connect Wifi Adapter because you will need wifi connection to run socket programming..
+3. Connect your monitor using a DVI cable to the Pi and now power the Pi using minimun 2.4 A current.
+4. You can either use the normal USB cable and suppy power to the Pi using the laptop if on switching on the monitor it shows low voltage sign then better use a 2.4 A adapter to power the Pi.
+5. If no issues then now, you are using Pi as CPU with monitor and mouse and keyboard attached. Also connect wifi to the system.
+6. Connection for socket program: In sever computer open cmd and check your IP Address using ipconfig command.
+7. Open server.py file and add an empty port number should be greater than 1000.
+8. Open client.py file in the Pi computer and enter the IP address of the server that you saw using ipconfig command also ports on both the files should be same.
+9. First Run the server program then the client program.
+10. Socket will be created and you can send the message to and fro the server and the client.

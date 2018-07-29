@@ -1,0 +1,10 @@
+1. Now open the final_test.py file in the server pc and the your car controling file, stream_client.py and ultrasonic.py in the Pi terminal.
+2. We will run the three files simultaneously using Threads.
+3. Set the IP addressses of the Server in each of the threads
+4. Give different port numbers to all the three threads and corresponding to the three files of the Pi.
+5. Start the server program final_test.py then the three files.
+6. Pi camera is streaming video frames and sending to the server then the ultrasonic sensor is sending the distances to the server.
+7. Then the server is making the dicisions according to the model's prediction and sending the results of the direction to move back to the Pi.
+8. The drive_thread takes the prediction and then takes the car navigation directions.
+9. If the streaming detects stop sign then instructs the drive_thread to stop.
+10. If the streaming detects traffic lights then find the color of the traffic lights if red then instructs the drive_thread to stop and wait untill green.
