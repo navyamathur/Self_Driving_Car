@@ -1,4 +1,4 @@
-##Self Driving Car using Neural Networks
+# Self Driving Car using Neural Networks
 
 Build a fully autonomous vehicle prototype which captures live frames and distance and send it to Keras neural network model and take actions to navigate itself according to the inputs from the dynamic environment.
 
