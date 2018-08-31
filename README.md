@@ -20,4 +20,4 @@ This project is licensed under the MIT License
 ## Acknowledgments
 
 * **hamuchiwa/AutoRCCar** - [GitHub](https://github.com/hamuchiwa/AutoRCCar)
-* **pseudoyim/galvaneye** -[GitHUb](https://github.com/pseudoyim/galvaneye) 
+* **pseudoyim/galvaneye** -[GitHub](https://github.com/pseudoyim/galvaneye) 
